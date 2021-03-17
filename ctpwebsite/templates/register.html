@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/register.css">
+{% endblock %}
+{% block body %}
+    <div id="div_head">
+
+    </div>
+    <div id="div_main">
+        <form method="POST" action="/register/">
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="2">
+                            <h3>注册</h3>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>账号:</td>
+                        <td class="tdleft">
+                            <input type="text" placeholder="账号" id="uid" name="uid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码:</td>
+                        <td class="tdleft">
+                            <input type="password" placeholder="密码" id="pwd" name="pwd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确定密码:</td>
+                        <td class="tdleft">
+                            <input type="password" placeholder="确定密码" id="confirmpwd" name="confirmpwd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>验证问题:</td>
+                        <td class="tdleft">
+                            <select id="question" name="question">
+                                {% for key,value in questionlist.items %}
+                                    <option value='{{key}}'>{{value}}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>回答:</td>
+                        <td class="tdleft">
+                            <input type="text" id="answer" name="answer">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>验证码:</td>
+                        <td class="tdleft">
+                            <input type="text" id="checkcode">
+                            <div id="div_code">
+                                <canvas id="code"></canvas>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="注册" id="register">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            {% csrf_token %}
+            <input type="hidden" name="checkstatus" value="68934a3e9455fa72420237eb05902327" id="checkstatus">
+        </form>
+    </div>
+    <div id="div_foot"></div>
+{% endblock %}
+{% block scripts %}
+    <script src="/static/JS/jquery-3.4.1.min.js"></script>
+    <script src="/static/JS/jquery.validate.min.js"></script>
+    <script src="/static/JS/register.js"></script>
+{% endblock %}

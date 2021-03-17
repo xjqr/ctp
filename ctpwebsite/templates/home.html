@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/CSS/home.css">
+{% endblock %}
+{% block body %}
+    <div id="div_head">
+        <h1>商品期货行情数据收集系统</h1>
+    </div>
+    <div id="div_main">
+        <div id="div_left">
+            <h3>菜单</h3>
+            <ul id="ul_meanus">
+                <li class="meanus_item">
+                    <a href="/personcenter/" class="a_item">个人中心</a>
+                </li>
+                <li class="meanus_item">
+                    <a href="/kpicture/" class="a_item">k线图</a>
+                    <ul class="submeanus">
+                        <li class="submeanus_item">
+                            <a href="/rkpicture" class="a_item">日k线图</a>
+                        </li>
+                        <li class="submeanus_item">
+                            <a href="/zkpicture/" class="a_item">周k线图</a>
+                        </li>
+                        <li class="submeanus_item">
+                            <a href="/ykpicture" class="a_item">月k线图</a>
+                        </li>    
+                    </ul>
+                </li>
+                <li class="meanus_item">
+                    <a href="/setting/" class="a_item">设置</a>
+                </li>
+                <li class="meanus_item">
+                    <a href="/logicout/" class="a_item">退出</a>
+                </li>
+            </ul>
+        </div>
+        <div id="div_right">
+            <iframe src="/kpicture/"></iframe>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <div id="div_foot">
+        <p>本站未经授权禁止爬虫采集数据！</p>
+    </div> 
+{% endblock %}
+{% block scripts %}
+    <script src="/static/JS/jquery-3.4.1.min.js"></script>
+    <script src="/static/JS/echarts.min.js"></script>
+    <script src="/static/JS/home.js"></script>
+{% endblock %}

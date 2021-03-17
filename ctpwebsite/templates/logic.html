@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/CSS/logic.css">
+{% endblock %}
+{% block body %}
+    <div id="div_header">
+        <h1>商品期货实时数据收集系统</h1>
+    </div>
+    <div id="div_container">
+        <form id="form_userinfo">
+           <div id="div_logic">
+            <div id="div_title">
+                <h2>登陆</h2>
+            </div>
+            <div>
+            <div id="div_info">
+                <div id="div_left">
+                    <label>用户名：</label>
+                    <label>密码：</label>
+                </div>
+                <div id="div_right">
+                    <input type="text" placeholder="用户名" id="uid" name="uid"><br/>
+                    <input type="password" placeholder="密码" id="pwd" name="pwd">
+                </div>
+                <div class="clr"></div>
+            </div>
+            </div>
+            <div>
+                <div id="div_btn">
+                    <input type="button" value="登陆" class="btn" id="btn_submit" onclick="logic()">
+                    <input type="button" value="注册" class="btn" id=btn_register onclick="gotoregisterpage()">
+                </div>
+            </div>           
+            {% csrf_token %}
+           </div>
+        </form>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="/static/JS/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="/static/JS/logic.js"></script>
+{% endblock %}
