@@ -65,4 +65,11 @@ def logicout(request):
     """退出视图。"""
     request.session.clear()
     return redirect(to='/logic/')
+
+
+def personcenter(request):
+    """个人中心视图。"""
+
+
+    return render(request,'personcenter.html')
     

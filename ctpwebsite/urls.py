@@ -9,6 +9,7 @@ urlpatterns = [
     path(r'kpicture/',views.kpicture,name='kpicture'),
     path(r'logicout/',views.logicout,name='logicout'),
     path(r'kdataapi/<id>/',views.kdataapi,name='kdataapi'),
+    path(r'personcenter/',views.personcenter,name='personcenter'),
 ]
 
 app_name='ctpwebsite'
