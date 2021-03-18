@@ -69,7 +69,7 @@ def logicout(request):
 
 def personcenter(request):
     """个人中心视图。"""
-
-
-    return render(request,'personcenter.html')
+    if request.session.get('user',default=False):
+        
+        return render(request,'personcenter.html')
     
