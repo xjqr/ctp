@@ -1,3 +1,16 @@
+$(function(){
+    $("#uid").focus();
+    $("#uid").bind('keydown',function(e){
+        if(e.keyCode==13){    
+           $("#pwd").focus();
+        }
+    });
+    $("#pwd").bind('keydown',function(e){
+        if(e.keyCode==13){    
+           logic();
+        }
+    });
+});
 function logic(){
     if($("#uid").val()==''||$('#pwd').val()==''){
         alert('用户名或密码不能为空');

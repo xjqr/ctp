@@ -9,8 +9,8 @@ h2{text-align: center;}
 label{display: block;margin-bottom: 2px;}
 #div_left{float: left;}
 #div_right{float:left;}
-#uid{padding-left: 2px;margin-bottom: 4px;}
-#pwd{padding-left: 2px;}
+#uid{padding-left: 2px;margin-bottom: 4px;outline: none;}
+#pwd{padding-left: 2px;outline: none;}
 #uid:focus{border-color: aliceblue;}
 #pwd:focus{border-color: aliceblue;}
 .clr{clear: both;}
