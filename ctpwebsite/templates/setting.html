@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/CSS/setting.css">
+{% endblock %}
+{% block body %}
+    <div id="div_main">
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="2">
+                        <h3>设置</h3>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label>行情环境:</label>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="模拟环境">模拟环境</option>
+                            <option value="真实环境">真实环境</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+    
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="保存">
+                        <input type="button" value="取消">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="/static/JS/jquery-3.4.1.min.js"></script>
+    <script src="/static/JS/setting.js"></script>
+{% endblock %}

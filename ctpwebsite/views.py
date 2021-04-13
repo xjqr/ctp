@@ -72,4 +72,10 @@ def personcenter(request):
     if request.session.get('user',default=False):
         
         return render(request,'personcenter.html')
+
+def setting(request):
+
+    if request.session.get('user',default=False):
+
+        return render(request,'setting.html')
     
